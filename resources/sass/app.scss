@@ -6,3 +6,22 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.dot {
+    height: 8px;
+    width: 8px;
+    margin-right: 8px;
+    background-color: #3490dc;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.card {
+    min-height: 190px;
+    border:none;
+}
+
+.breadcrumb {
+    background-color: unset;
+}
+

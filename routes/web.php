@@ -14,9 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/notes');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/notes', 'NoteController')->except(['show']);
+Route::get('/notes/my', 'NoteController@myNotes')->name('notes.myNotes');
