@@ -8,7 +8,7 @@
         id="name" 
         name="name" 
         placeholder="Enter your title here" 
-        value="{{ $note->name }}"
+        value="{{ old('name') ?: $note->name }}"
     >
     @error('name')
         <span class="invalid-feedback" role="alert">
@@ -18,7 +18,7 @@
 </div>
 <div class="form-group">
     <label for="description">Description</label>
-    <textarea placeholder="Enter your description here" class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="3">{{ $note->description }}</textarea>
+    <textarea placeholder="Enter your description here" class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="3">{{ old('description') ?: $note->description }}</textarea>
     @error('description')
         <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
