@@ -4,6 +4,7 @@
     <label for="name">Name</label>
     <input 
         type="text" 
+        required
         class="form-control @error('name') is-invalid @enderror" 
         id="name" 
         name="name" 
@@ -18,7 +19,7 @@
 </div>
 <div class="form-group">
     <label for="description">Description</label>
-    <textarea placeholder="Enter your description here" class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="3">{{ old('description') ?: $note->description }}</textarea>
+    <textarea required placeholder="Enter your description here" class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="3">{{ old('description') ?: $note->description }}</textarea>
     @error('description')
         <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>

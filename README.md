@@ -2,12 +2,10 @@
 
 Please follow the steps below to get the application up and running :
 
-1. run composer install
-2. run composer run-script post-root-package-install
-3. php artisan key:generate
-4. Edit your .env file accordingly (DB credentials)
-5. run php artisan migrate
-6. run php artisan serve
+1. run composer create-project
+1. Edit your DB configuration in .env file 
+1. run php artisan migrate
+1. run php artisan serve
 
 Database seeders were not implement so manual user registration is required.
 
